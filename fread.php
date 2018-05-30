@@ -1,5 +1,5 @@
 <?php
-$host = '127.0.0.1';
+$host = '10.11.4.130';
 $port = '3306';
 $user = 'root';
 $pass = '123456';
@@ -14,7 +14,7 @@ $field = 'body'; // 要写入的字段
 
 
 if (!$file) {
-    return 'file open fail';
+    die('file open fail');
 } else {
     $pdo = connection($host, $user, $pass, $db, $port);
     while (!feof($file)) {
